@@ -1,8 +1,8 @@
-import App from './App';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import App from "./App";
+import React from "react";
+import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
-import {StyledEngineProvider} from '@mui/material/styles';
+import {StyledEngineProvider} from "@mui/material/styles";
 
 ReactDOM.render(
     <React.StrictMode>

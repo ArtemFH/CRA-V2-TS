@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "*",
-    "axios": "*",
-    "react-dom": "*",
-    "react-redux": "*",
-    "react-scripts": "*",
     "@mui/material": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@reduxjs/toolkit": "*",
+    "axios": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "react-scripts": "*",
     "react-router-dom": "*",
+    "redux-devtools-extension": "*",
     "styled-components": "*"
   },
   "scripts": {
