@@ -1,3 +1,4 @@
+import {Box} from "@mui/material";
 import styled from "styled-components";
 import {Outlet} from "react-router-dom";
 
@@ -8,7 +9,9 @@ function Layout() {
     return (
         <Section>
             <NavBar/>
-            <Outlet/>
+            <Box>
+                <Outlet/>
+            </Box>
             <Footer/>
         </Section>
     );
@@ -17,5 +20,33 @@ function Layout() {
 export default Layout;
 
 const Section = styled('div')`
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+
+  header {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+    display: flex;
+  }
+
+  div {
+    width: 100%;
+    height: auto;
+    flex-grow: 2;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    flex-grow: 0;
+  }
 `
