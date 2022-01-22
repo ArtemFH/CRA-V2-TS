@@ -9,9 +9,9 @@ function Layout() {
     return (
         <Section>
             <NavBar/>
-            <Box>
+            <main>
                 <Outlet/>
-            </Box>
+            </main>
             <Footer/>
         </Section>
     );
@@ -35,7 +35,7 @@ const Section = styled('div')`
     display: flex;
   }
 
-  div {
+  main {
     width: 100%;
     height: auto;
     flex-grow: 2;
