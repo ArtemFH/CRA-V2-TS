@@ -8,3 +8,4 @@ const Loader = (Component) => (props) => (
 
 export const Index = Loader(lazy(() => import('../pages/index.page')));
 export const Feed = Loader(lazy(() => import('../pages/feed.page')));
+
