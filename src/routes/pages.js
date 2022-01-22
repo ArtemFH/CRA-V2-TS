@@ -1,4 +1,4 @@
-import {Suspense, lazy} from "react";
+import {lazy, Suspense} from "react";
 
 const Loader = (Component) => (props) => (
     <Suspense fallback={<></>}>
@@ -6,4 +6,5 @@ const Loader = (Component) => (props) => (
     </Suspense>
 )
 
-export const Home = Loader(lazy(() => import('../pages/home.page')));
+export const Index = Loader(lazy(() => import('../pages/index.page')));
+export const Feed = Loader(lazy(() => import('../pages/feed.page')));

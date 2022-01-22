@@ -1,5 +1,6 @@
-import {Home} from "./pages";
+import {Index, Feed} from "./pages";
 import {Layout} from "./components";
+import {RouteObject} from "react-router-dom";
 
 export const routes = [
     {
@@ -8,7 +9,22 @@ export const routes = [
         children: [
             {
                 path: "",
-                element: <Home/>
+                element: <Index/>
+            }
+        ]
+    }, {
+        path: "/",
+        element: <Layout/>,
+        children: [
+            {
+                path: "feed",
+                element: <Feed/>,
+                children: [
+                    {
+                        path: ":id",
+                        element: <Feed/>,
+                    }
+                ]
             }
         ]
     }
