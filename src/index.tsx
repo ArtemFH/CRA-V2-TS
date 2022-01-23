@@ -10,7 +10,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <StyledEngineProvider injectFirst>
-                <Provider store={store}>
+                <Provider store={store()}>
                     <App/>
                 </Provider>
             </StyledEngineProvider>

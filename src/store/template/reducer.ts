@@ -1,9 +1,14 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {fetchUsers} from "./actions";
-import {IUser} from "../../models/IUser";
 
-export interface CounterState {
-    users: IUser[];
+interface Users {
+    id: number,
+    name: string,
+    email: string
+}
+
+interface CounterState {
+    users: Users[];
     isLoading: boolean;
     errors: string;
 }
@@ -19,7 +24,7 @@ export const usersReducer = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        [fetchUsers.fulfilled.type]: (state, action: PayloadAction<IUser[]>) => {
+        [fetchUsers.fulfilled.type]: (state, action: PayloadAction<[]>) => {
             state.errors = '';
             state.isLoading = false;
             state.users = action.payload

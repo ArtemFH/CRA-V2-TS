@@ -2,7 +2,7 @@ import {Index, Feed} from "./pages";
 import {Layout} from "./components";
 import {RouteObject} from "react-router-dom";
 
-export const routes = [
+export const routes: RouteObject[] = [
     {
         path: "/",
         element: <Layout/>,
@@ -29,4 +29,3 @@ export const routes = [
         ]
     }
 ]
-

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useAppSelectior} from "../../hooks/redux";
+import {useAppSelectior} from "../../store/hook";
 import {usersReducer} from "../../store/template/reducer";
 
 export enum CardVariant {
@@ -22,7 +22,7 @@ const Card: FC<CardProps> =
          onClick,
          variant
      }) => {
-        const {} = useAppSelectior(state => state.usersReducer.)
+        const {} = useAppSelectior(state => state.)
         return (
             <div style={{
                 width, height,
