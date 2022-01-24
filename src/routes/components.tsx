@@ -1,7 +1,9 @@
-import {FC, lazy} from "react";
+import {FC, lazy, Suspense} from "react";
 
 const Loader = (Component: FC) => (props: any) => (
-    <Component {...props} />
+    <Suspense fallback={<></>}>
+        <Component {...props} />
+    </Suspense>
 );
 
-export const Layout = Loader(lazy(() => import('../ui-components/LayoutUI')));
+export const LayoutUi = Loader(lazy(() => import('../ui-components/LayoutUi')));

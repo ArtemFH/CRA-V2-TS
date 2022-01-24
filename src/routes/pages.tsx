@@ -4,4 +4,4 @@ const Loader = (Component: FC) => (props: any) => (
     <Component {...props} />
 );
 
-export const Index = Loader(lazy(() => import('../pages/IndexPage')));
+export const IndexPage = Loader(lazy(() => import('../pages/IndexPage')));
