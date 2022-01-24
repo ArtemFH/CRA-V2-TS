@@ -1,42 +1,26 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {fetchUsers} from "./actions";
-
-interface Users {
-    id: number,
-    name: string,
-    email: string
-}
+import {createSlice} from "@reduxjs/toolkit";
+import {fetchTemplates} from "./actions";
+import {ITemplate} from "../../models/ITemplate";
 
 interface CounterState {
-    users: Users[];
-    isLoading: boolean;
-    errors: string;
+    data: ITemplate[]
 }
 
 const initialState: CounterState = {
-    users: [],
-    isLoading: false,
-    errors: ''
+    data: [],
 };
 
-export const usersReducer = createSlice({
-    name: 'user',
+export const templateReducer = createSlice({
+    name: 'template',
     initialState,
     reducers: {},
     extraReducers: {
-        [fetchUsers.fulfilled.type]: (state, action: PayloadAction<[]>) => {
-            state.errors = '';
-            state.isLoading = false;
-            state.users = action.payload
+        [fetchTemplates.fulfilled.type]: (state, action) => {
+            state.data = action.payload;
         },
-        [fetchUsers.rejected.type]: (state, action: PayloadAction<string>) => {
-            state.errors = action.payload;
-            state.isLoading = false;
+        [fetchTemplates.rejected.type]: (state, action) => {
         },
-        [fetchUsers.pending.type]: (state) => {
-            state.isLoading = true;
+        [fetchTemplates.pending.type]: (state) => {
         }
     }
 })
-
-export default usersReducer.actions

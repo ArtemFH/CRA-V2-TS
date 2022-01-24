@@ -1,7 +1,8 @@
+import {ITemplate} from "../../models/ITemplate";
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import usersApi from "../../api/requests/users"
+import templatesApi from "../../api/requests/template"
 
-export const fetchUsers = createAsyncThunk('user/login', async () => {
-    const response = await usersApi.getUsers()
-    return response.data
+export const fetchTemplates = createAsyncThunk<ITemplate[]>('template', async () => {
+    const response = await templatesApi.getTemplates()
+    return response.data;
 })
