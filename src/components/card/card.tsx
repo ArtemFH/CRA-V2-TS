@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
-import {useAppSelectior} from "../../store/hook";
-import {usersReducer} from "../../store/template/reducer";
+import {useActions} from "../../store/hook";
 
 export enum CardVariant {
     outlined = 'outlined',
