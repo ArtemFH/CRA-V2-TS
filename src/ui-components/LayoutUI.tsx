@@ -2,13 +2,13 @@ import {FC} from "react";
 import styled from "styled-components";
 
 import {Outlet} from "react-router-dom";
-import NavBar from "../components/header/navbar";
-import Footer from "../components/footer/footer";
+import Navbar from "../components/header/Navbar";
+import Footer from "../components/footer/Footer";
 
 const Layout: FC = () => {
     return (
         <Section>
-            <NavBar/>
+            <Navbar/>
             <main>
                 <Outlet/>
             </main>

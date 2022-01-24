@@ -4,4 +4,4 @@ const Loader = (Component: FC) => (props: any) => (
     <Component {...props} />
 );
 
-export const Layout = Loader(lazy(() => import('../ui-components/layout-ui')));
+export const Layout = Loader(lazy(() => import('../ui-components/LayoutUI')));
