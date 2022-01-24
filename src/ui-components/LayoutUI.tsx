@@ -2,8 +2,8 @@ import {FC} from "react";
 import styled from "styled-components";
 
 import {Outlet} from "react-router-dom";
-import Navbar from "../components/header/Navbar";
-import Footer from "../components/footer/Footer";
+import Navbar from "../components/Header/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const Layout: FC = () => {
     return (
