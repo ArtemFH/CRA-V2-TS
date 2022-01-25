@@ -1,9 +1,7 @@
-import { AppDispatch, RootState } from "../store/store";
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
-import { bindActionCreators } from "@reduxjs/toolkit";
+import {RootState} from "../store/store";
+import {useDispatch, TypedUseSelectorHook, useSelector} from "react-redux";
+import {bindActionCreators} from "@reduxjs/toolkit";
 import * as TemplatesActionsCreator from "../store/template/actions"
-
-
 
 export const useActions = () => {
     const dispatch = useDispatch();
@@ -13,4 +11,3 @@ export const useActions = () => {
 }
 
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
-export const useAppDispatch = () => useDispatch<AppDispatch>();
